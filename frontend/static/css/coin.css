@@ -674,11 +674,17 @@ body {
 /* ===== FOOTER / UTIL ===== */
 .coin-empty {
     width: 100%;
-    color: #1d27b4;
+    color: #1d27b4; /* Default color for coin-empty */
     font-family: 'Abadi', 'Sackers Gothic', sans-serif;
-    font-size: 1.45rem;
-    letter-spacing: 0.5px;
+    font-size: clamp(1.35rem, 2vw, 1.8rem); /* Match coin-section-text */
+    font-weight: 700; /* Match coin-section-text */
+    line-height: 1.45; /* Match coin-section-text */
+    letter-spacing: 0.4px; /* Match coin-section-text */
     text-align: center;
+}
+
+.coin-empty-white {
+    color: #ffffff !important; /* Ensure white color overrides default */
 }
 
 .coin-click-card {

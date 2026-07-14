@@ -215,6 +215,8 @@ class PalestranteCoin(models.Model):
     dia_apresentacao = models.IntegerField(help_text="Dia 1, 2, etc.")
     foto = models.ImageField(upload_to='coin/palestrantes/', blank=True, null=True)
     ordem = models.IntegerField(default=0)
+    description = models.TextField("Descrição", default='')
+
 
     class Meta:
         verbose_name = "Palestrante CoIn"
@@ -231,3 +233,19 @@ class PatrocinadorCoin(models.Model):
 
     def __str__(self):
         return self.nome
+
+class HackathonCoin(models.Model):
+    title = models.CharField("Título", max_length=200)
+    summary = models.TextField("Resumo", max_length=550)
+    image = models.ImageField("Imagem", upload_to='hackathon/', blank=True, null=True)
+    link = models.URLField("Link do site do Hackathon", blank=True, null=True)
+    created_at = models.DateTimeField("Data de criação", auto_now_add=True)
+    is_active = models.BooleanField("Ativo", default=True)
+
+    class Meta:
+        verbose_name = "Hackathon CoIn"
+        verbose_name_plural = "Hackathons CoIn"
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.title

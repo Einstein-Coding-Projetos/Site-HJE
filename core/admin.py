@@ -1,4 +1,5 @@
 from django.contrib import admin
+from .models import PalestranteCoin, PatrocinadorCoin, HackathonCoin
 from .models import News, Project, CodigoSocialCard, HealthcareJuniorCard, Product, TeamMember, Eventos, CodigoSocialFoto
 from django import forms
 
@@ -58,4 +59,22 @@ class EventosAdmin(admin.ModelAdmin):
     list_display = ('title', 'is_active', 'is_featured', 'created_at')
     
 admin.site.register(CodigoSocialFoto)
+
+@admin.register(PalestranteCoin)
+class PalestranteCoinAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'cargo', 'dia_apresentacao', 'ordem')
+    list_editable = ('ordem',)
+    search_fields = ('nome', 'cargo')
+
+@admin.register(PatrocinadorCoin)
+class PatrocinadorCoinAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'ordem')
+    list_editable = ('ordem',)
+    search_fields = ('nome',)
+
+@admin.register(HackathonCoin)
+class HackathonCoinAdmin(admin.ModelAdmin):
+    list_display = ('title', 'is_active', 'created_at')
+    list_filter = ('is_active',)
+    search_fields = ('title', 'summary')
 

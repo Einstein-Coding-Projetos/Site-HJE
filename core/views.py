@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import News, Project, CodigoSocialCard, HealthcareJuniorCard, Product, TeamMember, Eventos, CodigoSocialFoto, PalestranteCoin, PatrocinadorCoin
+from .models import News, Project, CodigoSocialCard, HealthcareJuniorCard, Product, TeamMember, Eventos, CodigoSocialFoto, PalestranteCoin, PatrocinadorCoin, HackathonCoin
 from django.db.models import Q
 
 def home(request):
@@ -101,6 +101,7 @@ def coin_view(request):
     context = {
         'dias_evento': dias_evento,
         'patrocinadores': PatrocinadorCoin.objects.all().order_by('ordem'),
+        'hackathons': HackathonCoin.objects.filter(is_active=True).order_by('-created_at'),
         'tema_oficial': 'O FUTURO DA SAÚDE É COOPERATIVO E INTELIGENTE'
     }
     return render(request, 'coin.html', context)

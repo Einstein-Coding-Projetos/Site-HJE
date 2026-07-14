@@ -104,6 +104,7 @@
                         <p class="coin-modal-kicker">Palestrante · Dia {{ dia }}</p>
                         <h3>{{ palestrante.nome }}</h3>
                         <p>{{ palestrante.cargo }}</p>
+                        <p>{{ palestrante.description }}</p>
                     </div>
                 </div>
                 {% empty %}
@@ -111,50 +112,7 @@
                 {% endfor %}
             </div>
             {% empty %}
-            <div class="coin-speakers-grid coin-placeholder-grid" data-aos="fade-up">
-                <a href="#palestrante-placeholder-1" class="coin-speaker-card coin-click-card">
-                    <img src="{% static 'imgs/palestrante.png' %}" alt="Palestrante" class="coin-speaker-img">
-                    <h3 class="coin-speaker-name">Palestrante 01</h3>
-                    <p class="coin-speaker-role">Especialista em IA na Saúde</p>
-                </a>
-                <div id="palestrante-placeholder-1" class="coin-modal">
-                    <a href="#cronograma" class="coin-modal-backdrop" aria-label="Fechar"></a>
-                    <div class="coin-modal-card">
-                        <a href="#cronograma" class="coin-modal-close" aria-label="Fechar">×</a>
-                        <img src="{% static 'imgs/palestrante.png' %}" alt="Palestrante" class="coin-modal-img">
-                        <p class="coin-modal-kicker">Palestrante</p>
-                        <p>Mais informações sobre a pessoa convidada serão adicionadas em breve.</p>
-                    </div>
-                </div>
-                <a href="#palestrante-placeholder-2" class="coin-speaker-card coin-click-card">
-                    <img src="{% static 'imgs/palestrante.png' %}" alt="Palestrante" class="coin-speaker-img">
-                    <h3 class="coin-speaker-name">Palestrante 02</h3>
-                    <p class="coin-speaker-role">Pesquisa, Dados e Tecnologia</p>
-                </a>
-                <div id="palestrante-placeholder-2" class="coin-modal">
-                    <a href="#cronograma" class="coin-modal-backdrop" aria-label="Fechar"></a>
-                    <div class="coin-modal-card">
-                        <a href="#cronograma" class="coin-modal-close" aria-label="Fechar">×</a>
-                        <img src="{% static 'imgs/palestrante.png' %}" alt="Palestrante" class="coin-modal-img">
-                        <p class="coin-modal-kicker">Palestrante</p>
-                        <p>Mais informações sobre a pessoa convidada serão adicionadas em breve.</p>
-                    </div>
-                </div>
-                <a href="#palestrante-placeholder-3" class="coin-speaker-card coin-click-card">
-                    <img src="{% static 'imgs/palestrante.png' %}" alt="Palestrante" class="coin-speaker-img">
-                    <h3 class="coin-speaker-name">Palestrante 03</h3>
-                    <p class="coin-speaker-role">Inovação em Saúde Digital</p>
-                </a>
-                <div id="palestrante-placeholder-3" class="coin-modal">
-                    <a href="#cronograma" class="coin-modal-backdrop" aria-label="Fechar"></a>
-                    <div class="coin-modal-card">
-                        <a href="#cronograma" class="coin-modal-close" aria-label="Fechar">×</a>
-                        <img src="{% static 'imgs/palestrante.png' %}" alt="Palestrante" class="coin-modal-img">
-                        <p class="coin-modal-kicker">Palestrante</p>
-                        <p>Mais informações sobre a pessoa convidada serão adicionadas em breve.</p>
-                    </div>
-                </div>
-            </div>
+            <p class="coin-empty">Nenhum palestrante confirmado no momento.</p>
             {% endfor %}
         </section>
 
@@ -182,63 +140,51 @@
                     </div>
                 </div>
                 {% empty %}
-                <a href="#patrocinador-placeholder-1" class="coin-sponsor-card coin-click-card">
-                    <img src="{% static 'imgs/palestrante.png' %}" alt="Patrocinador" class="patrocinador-logo">
-                    <span>Patrocinador 01</span>
-                </a>
-                <div id="patrocinador-placeholder-1" class="coin-modal">
-                    <a href="#patrocinadores" class="coin-modal-backdrop" aria-label="Fechar"></a>
-                    <div class="coin-modal-card">
-                        <a href="#patrocinadores" class="coin-modal-close" aria-label="Fechar">×</a>
-                        <img src="{% static 'imgs/palestrante.png' %}" alt="Patrocinador"
-                            class="coin-modal-img coin-modal-logo">
-                        <p class="coin-modal-kicker">Apoio e Patrocinadores</p>
-                        <p>Mais informações sobre o parceiro serão adicionadas em breve.</p>
-                    </div>
-                </div>
-                <a href="#patrocinador-placeholder-2" class="coin-sponsor-card coin-click-card">
-                    <img src="{% static 'imgs/palestrante.png' %}" alt="Patrocinador" class="patrocinador-logo">
-                    <span>Patrocinador 02</span>
-                </a>
-                <div id="patrocinador-placeholder-2" class="coin-modal">
-                    <a href="#patrocinadores" class="coin-modal-backdrop" aria-label="Fechar"></a>
-                    <div class="coin-modal-card">
-                        <a href="#patrocinadores" class="coin-modal-close" aria-label="Fechar">×</a>
-                        <img src="{% static 'imgs/palestrante.png' %}" alt="Patrocinador"
-                            class="coin-modal-img coin-modal-logo">
-                        <p class="coin-modal-kicker">Apoio e Patrocinadores</p>
-                        <p>Mais informações sobre o parceiro serão adicionadas em breve.</p>
-                    </div>
-                </div>
-                <a href="#patrocinador-placeholder-3" class="coin-sponsor-card coin-click-card">
-                    <img src="{% static 'imgs/palestrante.png' %}" alt="Patrocinador" class="patrocinador-logo">
-                    <span>Patrocinador 03</span>
-                </a>
-                <div id="patrocinador-placeholder-3" class="coin-modal">
-                    <a href="#patrocinadores" class="coin-modal-backdrop" aria-label="Fechar"></a>
-                    <div class="coin-modal-card">
-                        <a href="#patrocinadores" class="coin-modal-close" aria-label="Fechar">×</a>
-                        <img src="{% static 'imgs/palestrante.png' %}" alt="Patrocinador"
-                            class="coin-modal-img coin-modal-logo">
-                        <p class="coin-modal-kicker">Apoio e Patrocinadores</p>
-                        <p>Mais informações sobre o parceiro serão adicionadas em breve.</p>
-                    </div>
-                </div>
+                <p class="coin-empty coin-empty-white">Nenhum patrocinador confirmado no momento.</p>
                 {% endfor %}
             </div>
 
-            <a href="mailto:healthtechjr.einstein@gmail.com" class="coin-cta coin-cta-outline">
+            <a href="mailto:healthtechjr.einstein@gmail.com?subject=Interesse%20em%20Patrocínio%20CoIn&body=Olá,%20me%20interessei%20por%20vocês%20e%20queria%20ver%20a%20possibilidade%20de%20uma%20parceria%20de%20patrocínio%20para%20a%20CoIn." class="coin-cta coin-cta-outline">
                 Seja um Patrocinador
             </a>
         </section>
 
         <section id="hackathons" class="coin-section coin-hackathon-section" data-aos="fade-up">
-            <div class="coin-hackathon-panel">
-                <p class="coin-section-kicker">Experiência prática</p>
-                <h2 class="coin-section-title">Hackathons</h2>
-                <p class="coin-section-text">
-                    Em breve, mais informações sobre os hackathons do evento.
-                </p>
+            <p class="coin-section-kicker">Experiência prática</p>
+            <h2 class="coin-section-title">Hackathons</h2>
+            <div class="coin-hackathon-grid">
+                {% for hackathon in hackathons %}
+                <a href="#hackathon-{{ forloop.counter }}" class="coin-hackathon-card coin-click-card" data-aos="fade-up">
+                    {% if hackathon.image %}
+                    <img src="{{ hackathon.image.url }}" alt="{{ hackathon.title }}" class="coin-hackathon-img">
+                    {% endif %}
+                    <div class="coin-hackathon-content">
+                        <h3 class="coin-hackathon-title">{{ hackathon.title }}</h3>
+                        <p class="coin-hackathon-summary">{{ hackathon.summary }}</p>
+                    </div>
+                </a>
+                <div id="hackathon-{{ forloop.counter }}" class="coin-modal">
+                    <a href="#hackathons" class="coin-modal-backdrop" aria-label="Fechar"></a>
+                    <div class="coin-modal-card">
+                        <a href="#hackathons" class="coin-modal-close" aria-label="Fechar">×</a>
+                        {% if hackathon.image %}
+                        <img src="{{ hackathon.image.url }}" alt="{{ hackathon.title }}" class="coin-modal-img">
+                        {% endif %}
+                        <p class="coin-modal-kicker">Hackathon</p>
+                        <h3>{{ hackathon.title }}</h3>
+                        <p>{{ hackathon.summary }}</p>
+                        {% if hackathon.link %}
+                        <a href="{{ hackathon.link }}" target="_blank" class="coin-modal-link">Saiba mais</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% empty %}
+                <div class="coin-hackathon-panel">
+                    <p class="coin-section-text">
+                        Em breve, mais informações sobre os hackathons do evento.
+                    </p>
+                </div>
+                {% endfor %}
             </div>
         </section>
     </div>
