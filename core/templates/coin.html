@@ -154,14 +154,12 @@
             <h2 class="coin-section-title">Hackathons</h2>
             <div class="coin-hackathon-grid">
                 {% for hackathon in hackathons %}
-                <a href="#hackathon-{{ forloop.counter }}" class="coin-hackathon-card coin-click-card" data-aos="fade-up">
+                <a href="#hackathon-{{ forloop.counter }}" class="coin-sponsor-card coin-click-card" data-aos="fade-up">
                     {% if hackathon.image %}
-                    <img src="{{ hackathon.image.url }}" alt="{{ hackathon.title }}" class="coin-hackathon-img">
+                    <img src="{{ hackathon.image.url }}" alt="{{ hackathon.title }}" class="coin-speaker-img">
                     {% endif %}
-                    <div class="coin-hackathon-content">
-                        <h3 class="coin-hackathon-title">{{ hackathon.title }}</h3>
-                        <p class="coin-hackathon-summary">{{ hackathon.summary }}</p>
-                    </div>
+                    <h3 class="coin-speaker-name">{{ hackathon.title }}</h3>
+                    <p class="coin-speaker-role">{{ hackathon.summary }}</p>
                 </a>
                 <div id="hackathon-{{ forloop.counter }}" class="coin-modal">
                     <a href="#hackathons" class="coin-modal-backdrop" aria-label="Fechar"></a>
@@ -179,11 +177,7 @@
                     </div>
                 </div>
                 {% empty %}
-                <div class="coin-hackathon-panel">
-                    <p class="coin-section-text">
-                        Em breve, mais informações sobre os hackathons do evento.
-                    </p>
-                </div>
+                <p class="coin-empty coin-empty-white">Em breve, mais informações sobre os hackathons do evento.</p>
                 {% endfor %}
             </div>
         </section>

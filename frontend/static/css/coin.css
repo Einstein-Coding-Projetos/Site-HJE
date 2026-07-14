@@ -495,21 +495,13 @@ body {
     background: #0c1481;
 }
 
-.coin-hackathon-panel {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-}
 
-.coin-hackathon-panel::before {
-    display: none;
-}
-
-.coin-hackathon-panel .coin-section-text {
-    margin-bottom: 0;
+.coin-hackathon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 
 .coin-hackathon-section .coin-section-kicker,
@@ -518,6 +510,7 @@ body {
     color: #ffffff;
     text-shadow: none;
 }
+
 
 .coin-hackathon-section .coin-section-title {
     font-size: clamp(2.4rem, 4vw, 3.8rem);
