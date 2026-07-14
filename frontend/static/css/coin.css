@@ -1,3 +1,7 @@
+html {
+    font-size: 50%; /* Reduz a base para 8px (metade do padrão de 16px) */
+}
+
 @font-face {
     font-family: 'Sackers Gothic';
     src: url('../fonts/SackersGothic.ttf') format('truetype');
@@ -153,8 +157,10 @@ body {
 .coin-hero-image {
     display: block;
     width: 100%;
-    max-width: 980px;
+    max-width: 490px;
     height: auto;
+    max-height: 50vh; /* Limita a altura máxima a 50% da viewport */
+    object-fit: contain; /* Garante que a imagem se ajuste mantendo proporções */
 }
 
 .coin-hero-waves {
@@ -162,7 +168,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: 0;
-    width: min(42vw, 520px);
+    width: min(42vw, 260px);
     height: auto;
     object-fit: initial;
     pointer-events: none;
@@ -234,7 +240,7 @@ body {
 
 .coin-intro-section .coin-section-text {
     width: 90vw;
-    max-width: 1120px;
+    max-width: 560px;
     margin: 0 auto 4.8rem;
     color: rgba(226, 242, 255, 0.78);
     font-size: clamp(1.45rem, 1.9vw, 1.95rem);
@@ -244,14 +250,18 @@ body {
 
 .coin-feature-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(280px, 1fr));
-    gap: 2.2rem;
-    max-width: 1180px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .coin-feature-card {
+<<<<<<< HEAD
     min-height: 340px;
+=======
+    min-height: 170px;
+>>>>>>> henrique
     padding: 3.2rem 2.8rem;
     display: grid;
     grid-template-columns: 3.4rem 1fr;
@@ -281,10 +291,11 @@ body {
     height: 3.4rem;
     margin-bottom: 0;
     border: 1px solid rgba(12, 20, 129, 0.18);
-    border-radius: 14px;
+    border-radius: 5px;
     background: rgba(12, 20, 129, 0.04);
     color: #0c1481;
     box-shadow: 0 0 24px rgba(73, 215, 255, 0.14);
+    font-size: 1.5rem;
 }
 
 .coin-feature-card h3 {
@@ -351,13 +362,21 @@ body {
 .coin-speakers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+<<<<<<< HEAD
     gap: 2rem;
+=======
+    gap: 1rem;
+>>>>>>> henrique
     margin-top: 6rem;
     margin-bottom: 0;
 }
 
 .coin-speaker-card {
+<<<<<<< HEAD
     min-height: 380px;
+=======
+    min-height: 190px;
+>>>>>>> henrique
     padding: 3.5rem 3rem;
     text-align: center;
     transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
@@ -389,10 +408,17 @@ body {
 
 .coin-speaker-img,
 .coin-sponsors-section .patrocinador-logo {
+<<<<<<< HEAD
     width: 180px;
     height: 180px;
     max-width: 180px;
     max-height: 180px;
+=======
+    width: 90px;
+    height: 90px;
+    max-width: 90px;
+    max-height: 90px;
+>>>>>>> henrique
     border-radius: 50%;
     margin: 0 auto 1rem;
     object-fit: cover;
@@ -414,7 +440,7 @@ body {
     z-index: 1;
 }
 
-.coin-speaker-name,
+.coin-speaker-name,patrocinadores-grid
 .coin-sponsor-card span {
     font-size: 1.05rem;
     font-weight: 700;
@@ -460,9 +486,14 @@ body {
 .patrocinadores-grid,
 .coin-patrocinadores-grid {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     justify-items: center;
+=======
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+>>>>>>> henrique
     margin-top: 5rem;
     margin-bottom: 3rem;
     padding: 0;
@@ -476,7 +507,11 @@ body {
     width: 100%;
     min-width: 0;
     max-width: none;
+<<<<<<< HEAD
     min-height: 380px;
+=======
+    min-height: 190px;
+>>>>>>> henrique
     padding: 3.5rem 3rem;
     text-align: center;
     transition: transform 0.25s, box-shadow 0.25s;
@@ -597,7 +632,11 @@ body {
 
 .coin-modal-card {
     width: min(92vw, 820px);
+<<<<<<< HEAD
     min-height: 360px;
+=======
+    min-height: 180px;
+>>>>>>> henrique
     position: relative;
     z-index: 1;
     padding: 4rem 3rem;
@@ -668,11 +707,17 @@ body {
 /* ===== FOOTER / UTIL ===== */
 .coin-empty {
     width: 100%;
-    color: #1d27b4;
+    color: #1d27b4; /* Default color for coin-empty */
     font-family: 'Abadi', 'Sackers Gothic', sans-serif;
-    font-size: 1.45rem;
-    letter-spacing: 0.5px;
+    font-size: clamp(1.35rem, 2vw, 1.8rem); /* Match coin-section-text */
+    font-weight: 700; /* Match coin-section-text */
+    line-height: 1.45; /* Match coin-section-text */
+    letter-spacing: 0.4px; /* Match coin-section-text */
     text-align: center;
+}
+
+.coin-empty-white {
+    color: #ffffff !important; /* Ensure white color overrides default */
 }
 
 .coin-click-card {
@@ -693,7 +738,7 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
+@media (max-width: 450px) {
     .coin-navbar {
         flex-direction: column;
         gap: 1rem;
@@ -707,10 +752,10 @@ body {
     }
 
     .coin-hero-waves {
-        width: min(62vw, 360px);
+        width: min(62vw, 180px);
         bottom: 2rem;
         height: auto;
-        opacity: 0.7;
+        object-fit: contain; /* Apply for smaller screens too */
     }
 
     .coin-intro-section .coin-section-title {
@@ -846,4 +891,8 @@ a.coin-navbar-brand,
     width: auto;
     height: 5.2rem;
     object-fit: contain;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> henrique

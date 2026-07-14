@@ -8,6 +8,27 @@
 }
 
 /* =========================
+   VARIÁVEIS CSS - DESIGN SYSTEM CORPORATIVO
+========================= */
+:root {
+    --color-dark: #0d1117;
+    --color-navy: #1a2744;
+    --color-navy-light: #243654;
+    --color-white: #ffffff;
+    --color-gray-100: #f8f9fa;
+    --color-gray-200: #e9ecef;
+    --color-gray-400: #adb5bd;
+    --color-gray-600: #6c757d;
+    --color-accent: #3b82f6;
+    
+    --glass-bg: rgba(13, 17, 23, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg-light: rgba(26, 39, 68, 0.05);
+
+}
+
+
+/* =========================
    BODY
 ========================= */
 html,
