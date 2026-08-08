@@ -17,6 +17,17 @@
 
 <body style="background: var(--coin-dark-blue);">
 
+<<<<<<< HEAD
+  <!-- HEADER COIN -->
+  <header id="desktop-original-header" class="navbar coin-navbar">
+    <nav class="navbar-links coin-navbar-links left">
+      <a href="{% url 'home' %}">HJE</a>
+    </nav>
+    <div class="navbar-center">
+      <a href="{% url 'coin_page' %}" class="brand coin-navbar-brand">
+        <img src="{% static 'imgs/coin-logo.png' %}" alt="CoIn" class="coin-navbar-logo">
+      </a>
+=======
     <!-- HEADER COIN -->
     <header id="desktop-original-header" class="navbar coin-navbar">
         <nav class="navbar-links coin-navbar-links left">
@@ -181,8 +192,81 @@
                 {% endfor %}
             </div>
         </section>
+>>>>>>> henrique
     </div>
 
+<<<<<<< HEAD
+  <div class="coin-theme">
+    <section class="coin-hero">
+      <div class="coin-hero-bg"></div>
+      <img src="{% static 'imgs/coin-waves.png' %}" alt="" class="coin-hero-waves" aria-hidden="true">
+      <div class="coin-hero-content" data-aos="zoom-in">
+        <img src="{% static 'imgs/logo-cognito.png' %}" alt="CognitoIn" class="coin-hero-image">
+        <a href="#cronograma" class="coin-cta coin-cta-button">Ver Palestrantes</a>
+      </div>
+    </section>
+
+    <section class="coin-section coin-intro-section" data-aos="fade-up">
+      <p class="coin-section-kicker">Inteligência artificial aplicada à saúde</p>
+      <h2 class="coin-section-title">A Semana da IA na Saude</h2>
+      <p class="coin-section-text">
+        A Semana da Inteligência Artificial (CoIn) reúne especialistas da intersecção entre tecnologia e saúde para
+        discutir inovação, desafios e o futuro da medicina apoiada por dados.
+      </p>
+      <div class="coin-feature-grid">
+        <article class="coin-feature-card">
+          <span class="coin-feature-icon">01</span>
+          <h3>Inovação</h3>
+          <p>Conversas sobre novas soluções digitais, pesquisa aplicada e tecnologias emergentes.</p>
+        </article>
+        <article class="coin-feature-card">
+          <span class="coin-feature-icon">02</span>
+          <h3>Saúde</h3>
+          <p>Debates sobre impacto clínico, cuidado centrado no paciente e uso responsável de dados.</p>
+        </article>
+        <article class="coin-feature-card">
+          <span class="coin-feature-icon">03</span>
+          <h3>Conexão</h3>
+          <p>Um encontro para aproximar estudantes, profissionais, empresas e pesquisadores.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cronograma" class="coin-section coin-schedule-section">
+      <p class="coin-section-kicker">Programação</p>
+      <h2 class="coin-section-title">Palestrantes</h2>
+      {% for dia, lista_palestrantes in dias_evento.items %}
+      <h3 class="coin-dia-title" data-aos="fade-right">Dia {{ dia }}</h3>
+      <div class="coin-speakers-grid">
+        {% for palestrante in lista_palestrantes %}
+        <a href="#palestrante-{{ dia }}-{{ forloop.counter }}" class="coin-speaker-card coin-click-card"
+          data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+          {% if palestrante.foto %}
+          <img src="{{ palestrante.foto.url }}" alt="{{ palestrante.nome }}" class="coin-speaker-img">
+          {% else %}
+          <div class="coin-speaker-img"
+            style="display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border-color: var(--coin-neon-blue);">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          {% endif %}
+          <h3 class="coin-speaker-name">{{ palestrante.nome }}</h3>
+          <p class="coin-speaker-role">{{ palestrante.cargo }}</p>
+        </a>
+        <div id="palestrante-{{ dia }}-{{ forloop.counter }}" class="coin-modal">
+          <a href="#cronograma" class="coin-modal-backdrop" aria-label="Fechar"></a>
+          <div class="coin-modal-card">
+            <a href="#cronograma" class="coin-modal-close" aria-label="Fechar">×</a>
+            {% if palestrante.foto %}
+            <img src="{{ palestrante.foto.url }}" alt="{{ palestrante.nome }}" class="coin-modal-img">
+            {% endif %}
+            <p class="coin-modal-kicker">Palestrante · Dia {{ dia }}</p>
+            <h3>{{ palestrante.nome }}</h3>
+            <p>{{ palestrante.cargo }}</p>
+          </div>
+=======
     <footer class="footer coin-footer">
         <p>© 2026 Healthtech Júnior Einstein | CoIn</p>
         <div class="social-links">
@@ -190,6 +274,7 @@
                     src="{% static 'imgs/instagram.svg' %}" alt="Instagram"></a>
             <a href="https://www.linkedin.com/company/einsteincoding/" target="_blank"><img
                     src="{% static 'imgs/linkedin.svg' %}" alt="LinkedIn"></a>
+>>>>>>> henrique
         </div>
         <p>Email: healthtechjr.einstein@gmail.com</p>
     </footer>
